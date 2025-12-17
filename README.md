@@ -5,13 +5,13 @@
 2. [Definitions](#Definitions)
 3. [Setup](#Set-Up)
    - [Creating a VPC](#Creating-a-VPC)
-   - [NAT Gateway](##NAT-Gateway)
-   - [Creating a Bastion Host](##Creating-the-Bastion-Host)
-   - [Creating Private Instance](##Creating-the-Private-Instance)
-   - [Connecting to the Private Instance](##Connecting-to-the-Private-Instance)
-     - [Loading SSH Key](###-Loading-your-SSH-Private-Key)
-     - [Connecting to Bastion](###-Connecting-to-the-Bastion)
-     - [Hopping to the Private Instance](###Hopping-to-the-Private-Instance)
+   - [NAT Gateway](#NAT-Gateway)
+   - [Creating a Bastion Host](#Creating-the-Bastion-Host)
+   - [Creating Private Instance](#Creating-the-Private-Instance)
+   - [Connecting to the Private Instance](#Connecting-to-the-Private-Instance)
+     - [Loading SSH Key](#-Loading-your-SSH-Private-Key)
+     - [Connecting to Bastion](#-Connecting-to-the-Bastion)
+     - [Hopping to the Private Instance](#Hopping-to-the-Private-Instance)
 
 # Overview
 
