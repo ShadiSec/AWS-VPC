@@ -4,7 +4,7 @@
 1. [Introduction](#Overview)
 2. [Definitions](#Definitions)
 3. [Setup](#Set-Up)
-   - [Creating a VPC](##Creating-a-VPC)
+   - [Creating a VPC](#Creating-a-VPC)
    - [NAT Gateway](##NAT-Gateway)
    - [Creating a Bastion Host](##Creating-the-Bastion-Host)
    - [Creating Private Instance](##Creating-the-Private-Instance)
