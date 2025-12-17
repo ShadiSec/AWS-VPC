@@ -29,7 +29,7 @@ In this write-up, I will run you through the process of setting up:
     5. Customize Subnets CIDR Blocks:
         1. Public = 172.16.8.0/26 (64 IPs)
         2. Private = 172.16.9.0/23 (512 IPs)
-    6. Leave everything else as default and click “Create VPC.”
+    6. Leave everything else as the default and click “Create VPC.”
 
 ## NAT Gateway
 
@@ -41,7 +41,7 @@ The NAT Gateway allows our instances to communicate with the internet by routing
 ## Creating the Bastion Host
 
 1. Navigate to the EC2 service dashboard.
-2. Click “Launch Instance”
+2. Click “Launch Instance.”
 3. In the wizard:
     1. OS Image = Amazon Linux
     2. Key Pair = Select your key pair:
@@ -53,20 +53,20 @@ The NAT Gateway allows our instances to communicate with the internet by routing
         2. VPC = Select the VPC we created earlier
         3. Subnet = Select the Public subnet
         
-        ![image.png](AWS%20Virtual%20Private%20Cloud%20(VPC)/image.png)
+        ![image.png](/images/image.png)
         
         1. Security group name = Name it something like BastionSG
         2. Firewall:
-            1. Allow SSH Traffic from “My IP”
+            1. Allow SSH Traffic from “My IP.”
             
-            ![image.png](AWS%20Virtual%20Private%20Cloud%20(VPC)/image%201.png)
+            ![image.png](/images/image-1.png)
             
 4. Leave everything else as the default and click “Launch Instance.”
 
 ## Creating the Private Instance
 
 1. In the EC2 dashboard.
-2. Click “Launch Instance”
+2. Click “Launch Instance.”
 3. In the wizard:
     1. OS Image = Ubuntu
     2. Key Pair = Select your key pair (Should be the same one you selected for the Bastion Host instance creation).
@@ -75,14 +75,14 @@ The NAT Gateway allows our instances to communicate with the internet by routing
         2. VPC = Select the VPC we created earlier
         3. Subnet = Select the Private subnet
         
-        ![image.png](AWS%20Virtual%20Private%20Cloud%20(VPC)/image%202.png)
+        ![image.png](/images/image-2.png)
         
         1. Security group name = Name it something like PrivateLinuxSG.
         2. Firewall:
             1. Allow SSH Traffic from the “Custom” Source type
             2. In the “Source”, select the bastion security group created earlier.
             
-            ![image.png](AWS%20Virtual%20Private%20Cloud%20(VPC)/image%203.png)
+            ![image.png](/images/image-3.png)
             
 4. Leave everything else as the default and click “Launch Instance.”
 
@@ -100,7 +100,7 @@ The NAT Gateway allows our instances to communicate with the internet by routing
     1. If you get a warning about “Unprotected Permissions,” run:
         
         ```bash
-        # This sets the file permisssions
+        # This sets the file permissions
         # to only be readable by the owner (you).
         chmod 400 /path/to/ssh_key.pem
         ```
@@ -120,7 +120,7 @@ The NAT Gateway allows our instances to communicate with the internet by routing
 3. Open your terminal and run:
     
     ```bash
-    # The default user for Amazon Linux is 'ec2-user'
+    # The default user for Amazon Linux is 'ec2-user'.
     # The '-A' enables SSH Agent Forwarding for the current connection.
     ssh -A <user>@<bastion-IP>
     ```
@@ -139,4 +139,4 @@ The NAT Gateway allows our instances to communicate with the internet by routing
     
 3. If everything was successful, you should now be inside the Private Instance. 
     
-    ![image.png](AWS%20Virtual%20Private%20Cloud%20(VPC)/image%204.png)
+    ![image.png](/images/image-4.png)
