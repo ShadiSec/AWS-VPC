@@ -9,8 +9,8 @@
    - [Creating a Bastion Host](#Creating-the-Bastion-Host)
    - [Creating Private Instance](#Creating-the-Private-Instance)
    - [Connecting to the Private Instance](#Connecting-to-the-Private-Instance)
-     - [Loading SSH Key](#-Loading-your-SSH-Private-Key)
-     - [Connecting to Bastion](#-Connecting-to-the-Bastion)
+     - [Loading SSH Key](#Loading-your-SSH-Private-Key)
+     - [Connecting to Bastion](#Connecting-to-the-Bastion)
      - [Hopping to the Private Instance](#Hopping-to-the-Private-Instance)
 
 # Overview
